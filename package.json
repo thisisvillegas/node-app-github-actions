@@ -1,5 +1,5 @@
 {
-  "name": "node-github-demo",
+  "name": "github-demo",
   "version": "1.0.0",
   "description": "CI/CD NodeJs App using Github Actions",
   "main": "index.js",
@@ -20,7 +20,10 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "mocha": "^7.0.1",
+    "mocha": "^7.2.0",
     "supertest": "^4.0.2"
+  },
+  "directories": {
+    "test": "test"
   }
 }
