@@ -38,6 +38,7 @@ jobs:
         hosts: ${{ secrets.SSH_HOST }}
         # username: ${{ secrets.SSH_USERNAME }}
         privateKey: ${{ secrets.SSH_KEY }}
+        debug: true
         # port: ${{ secrets.SSH_PORT }}
         command: |
           cd ~/node-app-github-actions
