@@ -33,14 +33,13 @@ jobs:
 
     steps:
     - name: SSH and deploy node app
-      uses: JimCronqvist/action-ssh@master
+      uses: appleboy/action-ssh@master
       with:
-        hosts: ${{ secrets.SSH_HOST }}
-        # username: ${{ secrets.SSH_USERNAME }}
-        privateKey: ${{ secrets.SSH_KEY }}
-        debug: true
-        # port: ${{ secrets.SSH_PORT }}
-        command: |
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        port: ${{ secrets.SSH_PORT }}
+        script: |
           cd ~/node-app-github-actions
           git pull origin master
           npm install --production
