@@ -33,12 +33,13 @@ jobs:
 
     steps:
     - name: SSH and deploy node app
-      uses: appleboy/https-action@master
+      uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.SSH_PORT }}
+        debug: true
         script: |
           cd ~/node-app-github-actions
           git pull origin master
